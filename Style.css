@@ -36,6 +36,7 @@ body {
 .grid-item-left h3 {
 
     text-align: center;
+    margin-bottom:0; 
 }
 .grid-item-left img {
 
@@ -53,4 +54,48 @@ body {
 }
 .light-grey-background {
     background-color: #4C6977; 
+}
+
+.icon-phone {
+    background-image: url("phone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+.icon-mail {
+    background-image: url("mail.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+.icon-github {
+    background-image: url("github.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+.icon-website {
+    background-image: url("website.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+a {
+    color:white; 
+}
+#title {
+    margin-top: 0;
+    text-align: center;
 }
