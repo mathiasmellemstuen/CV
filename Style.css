@@ -10,6 +10,7 @@ body {
     margin-bottom:1vh;
     padding:0; 
     background-color: #eeeeee;
+    font-family: 'Roboto', sans-serif;
 }
 #grid {
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
@@ -19,17 +20,26 @@ body {
     padding: 0.5vw; 
     background-color: white;
     height: calc(49vw * 1.414);/*A4 ratio*/
-    display:grid; 
+    display:grid;
     grid-column-gap: 1%;
     grid-template-columns: 30% 69%; 
 }
 .grid-item-left {
+    color: white; 
     background-color: #3D5561; 
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 1;
+    padding: 5%; 
+}
+.grid-item-left h3 {
 
+    text-align: center;
+}
+.grid-item-left img {
+
+    width:100%; 
 }
 .grid-item-right {
     background-color:#f8f8ff; 
@@ -37,6 +47,9 @@ body {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
+}
+.grid-item-right h1 {
+    text-align: center;
 }
 .light-grey-background {
     background-color: #4C6977; 
