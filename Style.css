@@ -1,10 +1,15 @@
-/*
-Mørk grå: 3D5561
-Lys grå: 4C6977
-Mørk tekst: 4C6977
-Ghost white: #f8f8ff
-*/
-
+p {
+    font-size: 0.8vw;
+}
+h1 {
+    font-size: 2vw;
+}
+h2 {
+    font-size: 1.5vw;
+}
+h3 {
+    font-size: 1vw;
+}
 body {
     margin-top:1vh; 
     margin-bottom:1vh;
