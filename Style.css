@@ -1,15 +1,22 @@
-p {
-    font-size: 0.8vw;
+@media (min-width: 1000px) {
+    
+    #grid {
+
+        min-width: 1000px;
+        width:49vw; 
+        grid-template-columns: 30% 69%; 
+
+    }
 }
-h1 {
-    font-size: 2vw;
+@media (max-width: 1000px) {
+    
+    #grid {
+        width: 90%;
+        font-size: 0.7em;
+        grid-template-columns: 49% 50%; 
+    }
 }
-h2 {
-    font-size: 1.5vw;
-}
-h3 {
-    font-size: 1vw;
-}
+
 body {
     margin-top:1vh; 
     margin-bottom:1vh;
@@ -18,16 +25,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 #grid {
+    margin-left: auto; 
+    margin-right: auto; 
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
-    width:49vw; 
-    margin-left: 25vw; 
-    margin-right: 25vw; 
     padding: 0.5vw; 
     background-color: white;
-    height: calc(49vw * 1.414);/*A4 ratio*/
+    min-height: 1024px;
     display:grid;
     grid-column-gap: 1%;
-    grid-template-columns: 30% 69%; 
 }
 .grid-item-left {
     color: white; 
@@ -37,6 +42,7 @@ body {
     grid-row-start: 1;
     grid-row-end: 1;
     padding: 5%; 
+    position:relative; 
 }
 .grid-item-left h3 {
 
@@ -103,4 +109,32 @@ a {
 #title {
     margin-top: 0;
     text-align: center;
+}
+.under-over-line {
+    padding-top:3px; 
+    padding-bottom:3px; 
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+}
+#download-button {
+    position:absolute; 
+    width:90%;
+    height:3em; 
+    background-color:rgb(49, 67, 77); 
+    bottom: 5px; 
+    transition: 0.2s linear;
+
+} 
+#download-button a {
+    position: absolute;
+    color:white; 
+    height:100%; 
+    text-align: center;
+    width:100%; 
+    line-height:3em;
+    text-decoration: none;
+}
+
+#download-button:hover {
+    background-color: #4C6977; 
 }
