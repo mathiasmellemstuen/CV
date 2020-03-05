@@ -5,16 +5,122 @@
         min-width: 1000px;
         width:49vw; 
         grid-template-columns: 30% 69%; 
+        grid-template-rows: 4em auto; 
+    }
+    #grid h1 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        background-color:#f8f8ff; 
+        margin-bottom:0; 
 
     }
+    .grid-item-extra {
+        color: white; 
+        background-color: #3D5561; 
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        padding: 5%; 
+        position:relative; 
+    }
+    .grid-item-extra h3 {
+
+        text-align: center;
+        margin-bottom:0; 
+    }
+    .grid-item-extra img {
+    
+        width:100%; 
+    }
+    .grid-item-main {
+        background-color:#f8f8ff; 
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .grid-item-main h1 {
+        text-align: center;
+    }
+    a {
+        color:white; 
+    }
+    #download-button {
+        position:absolute; 
+        width:90%;
+        height:3em; 
+        background-color:rgb(49, 67, 77); 
+        bottom: 5px; 
+        transition: 0.2s linear;
+    
+    } 
+    #download-button a {
+        position: absolute;
+        color:white; 
+        height:100%; 
+        text-align: center;
+        width:100%; 
+        line-height:3em;
+        text-decoration: none;
+    }
+    
 }
 @media (max-width: 1000px) {
     
+
     #grid {
-        width: 90%;
-        font-size: 0.7em;
-        grid-template-columns: 49% 50%; 
+        display:flex; 
+        flex-direction: column;
+        width: 100%;
     }
+    #grid h1 {
+        order:1; 
+        background-color: #3D5561; 
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 1.5em;
+        padding-bottom:1.5em; 
+        text-align:center; 
+        color:white; 
+
+    }
+    .grid-item-main {
+        order:3; 
+    }
+    .grid-item-extra {
+        order:2; 
+        color:black;
+        text-align:center; 
+    }
+    a {
+        color:black; 
+    }
+    #download-button {
+        position:fixed; 
+        width:100%;
+        height:3em; 
+        background-color:rgb(49, 67, 77); 
+        bottom: 5px; 
+        transition: 0.2s linear;
+        left:10px; 
+        right:10px; 
+    
+    } 
+    #download-button a {
+        position:fixed;
+        color:white; 
+        text-align: center;
+        line-height:3em;
+        width:100%; 
+        text-decoration: none;
+        bottom:5px; 
+        left:10px; 
+        right:10px; 
+    }
+
 }
 
 body {
@@ -24,6 +130,7 @@ body {
     background-color: #eeeeee;
     font-family: 'Roboto', sans-serif;
 }
+
 #grid {
     margin-left: auto; 
     margin-right: auto; 
@@ -33,38 +140,6 @@ body {
     min-height: 1024px;
     display:grid;
     grid-column-gap: 1%;
-}
-.grid-item-left {
-    color: white; 
-    background-color: #3D5561; 
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    padding: 5%; 
-    position:relative; 
-}
-.grid-item-left h3 {
-
-    text-align: center;
-    margin-bottom:0; 
-}
-.grid-item-left img {
-
-    width:100%; 
-}
-.grid-item-right {
-    background-color:#f8f8ff; 
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-.grid-item-right h1 {
-    text-align: center;
-}
-.light-grey-background {
-    background-color: #4C6977; 
 }
 
 .icon-phone {
@@ -103,37 +178,18 @@ body {
     width: 1em;
     display:inline-block;
 }
-a {
-    color:white; 
-}
+
 #title {
     margin-top: 0;
     text-align: center;
 }
-.under-over-line {
+.header-lines {
     padding-top:3px; 
     padding-bottom:3px; 
     border-top:1px solid black;
     border-bottom:1px solid black;
 }
-#download-button {
-    position:absolute; 
-    width:90%;
-    height:3em; 
-    background-color:rgb(49, 67, 77); 
-    bottom: 5px; 
-    transition: 0.2s linear;
 
-} 
-#download-button a {
-    position: absolute;
-    color:white; 
-    height:100%; 
-    text-align: center;
-    width:100%; 
-    line-height:3em;
-    text-decoration: none;
-}
 
 #download-button:hover {
     background-color: #4C6977; 
