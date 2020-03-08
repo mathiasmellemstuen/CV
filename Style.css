@@ -123,6 +123,26 @@
 
 }
 
+@media print {
+    body {
+        width: 100%;
+        height:100%;
+        position:fixed;
+        top:0px;
+        bottom:0px;
+        margin: auto;
+        margin-top: 0px !important;
+        border: 1px solid;
+    }
+    main {
+        width:100%; 
+        padding: 0 0; 
+        margin: 0 0; 
+    }
+    #download-button {
+        displaY: none;
+    }
+}
 body {
     margin-top:1vh; 
     margin-bottom:1vh;
@@ -208,9 +228,12 @@ main {
     border-right-style: solid;
     min-width: 95px;
     float:left; 
+    overflow:hidden; 
 }
 .list-item .description {
     margin-left:20px; 
     display:inline-block; 
     float:left; 
+    overflow:hidden;    
+    display:block; 
 }
