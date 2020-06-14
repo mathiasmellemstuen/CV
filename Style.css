@@ -5,6 +5,9 @@
         width:49vw; 
         grid-template-columns: 30% 69%; 
         grid-template-rows: 4em auto; 
+        padding: 0.5vw; 
+        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+        min-height: 95vh;
     }
     
     main h1 {
@@ -12,7 +15,6 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
-        background-color:#f8f8ff; 
         margin-bottom:0;
     }
 
@@ -28,18 +30,15 @@
     }
 
     .extra-content h3 {
-
         text-align: center;
         margin-bottom:0; 
     }
 
     .extra-content img {
-    
         width:100%; 
     }
 
     .main-content {
-        background-color:#f8f8ff; 
         grid-column-start: 2;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -59,14 +58,13 @@
         width:90%;
         height:3em; 
         background-color:rgb(49, 67, 77); 
-        bottom: 5px; 
+        bottom: 15px; 
         transition: 0.2s linear;
-    
     } 
 
     #download-button a {
         position: absolute;
-        color:white; 
+        color:white;
         height:100%; 
         text-align: center;
         width:100%; 
@@ -74,17 +72,18 @@
         text-decoration: none;
     }
 
-    .icon-phone, .icon-mail, .icon-github, .icon-website{
+    .icon-phone, .icon-mail, .icon-github, .icon-website {
         filter:invert(); 
     }
 }
 @media (max-width: 1000px) {
-    
 
     main {
         display:flex; 
         flex-direction: column;
         width: 100%;
+        padding: 0.5vw; 
+        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
     }
 
     main h1 {
@@ -137,33 +136,61 @@
         left:10px; 
         right:10px;
     }
-
-
 }
-
 @media print {
+
     body {
+        display:block; 
+        overflow: visible;
         width: 100%;
-        height:100%;
+        height: auto;
         position:fixed;
         top:0px;
         bottom:0px;
         margin: auto;
         margin-top: 0px !important;
-        border: 1px solid;
+        page-break-inside:auto;
+        position: static;
     }
+    .flex-group {
+        display: inline;
+        position: static;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        page-break-inside:auto; 
 
+    }
+    .list-item {
+        page-break-inside:avoid; 
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+    }
     main {
         width:100%; 
         padding: 0 0; 
         margin: 0 0; 
+        overflow: visible; 
+        display:block; 
+        height: auto;
+        position: static;
+        box-shadow:10px 10px 10px 10px white;
     }
 
-    #download-button {
-        displaY: none;
+    #download-button, #language-button {
+        display: none;
     }
-
+    @page {
+        margin: 0;
+    }
+    img {
+        margin-top: 10px;
+    }
+    .header-lines {
+        margin-left: 1vh;
+        margin-right: 1vh;
+    }
 }
+
 body {
     margin-top:1vh; 
     margin-bottom:1vh;
@@ -175,11 +202,10 @@ body {
 main {
     margin-left: auto; 
     margin-right: auto; 
-    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
-    padding: 0.5vw; 
     background-color: white;
     display:grid;
     grid-column-gap: 1%;
+    
 }
 
 .icon-phone {
@@ -255,4 +281,81 @@ main {
 }
 .list-item .description {
     margin-left:20px; 
+}
+#language-button {
+    position:fixed; 
+    top: 10px;
+    right:10px; 
+    width: 3vw;
+    height: 3vw;
+    background: url("Icons/flag-norway.svg") no-repeat;
+    border:none;
+}
+#language-button:hover {
+    filter: brightness(70%);
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+.modal-start-hidden {
+    display:none;
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+    display: block;
+    position: relative;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(255, 255, 255, 0.90);
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    animation-name: modalanimation;
+    animation-duration: 0.4s
+}
+.modal-close-button {
+    margin-left:100%;   
+    border:none; 
+    cursor: pointer;
+    color: black;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+@keyframes modalanimation {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+.select-language-button{
+    display:flex; 
+    width:100%; 
+    border:none;
+    transition: 0.2s linear;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.select-language-button:hover {
+    background-color: rgb(218, 218, 218);
+}
+.language-button-flag {
+    height: 100%;
+}
+.language-button-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+    font-size: larger;
+    font-weight: bold;
+
 }

@@ -10,61 +10,42 @@
         <title>CV - Mathias Mellemstuen</title>
     </head>
     <body>
+        <div id="modal-language" class="modal modal-start-hidden">
+            <div class="modal-content">
+                <button class="modal-close-button">X</button>
+                <h2 class="modal-language-header">Språk</h2>
+                <div id="language-list">
+                    <button class="select-language-button" value="norwegian"><img class="language-button-flag" src="Icons/flag-norway.svg"/><p class="language-button-text">Norwegian</p></button>
+                    <button class="select-language-button" value="english"><img class="language-button-flag" src="Icons/flag-united-kingdom.svg"/><p class="language-button-text">English</p></button>
+                </div>
+            </div>
+        </div>
         <main>
-            <h1>Curriculum Vitae</h1>
+            <button id="language-button"></button>
+            <h1 id="page-header">Curriculum Vitae</h1>
             <div class="extra-content dark-blue-background">
                 <img src="Images/profilepicture.png"/>
-                <h3>Mathias Mellemstuen</h3>
+                <h3 id="name">Mathias Mellemstuen</h3>
                 <p id="title">Dataingeniør</p>
                 <p>
-                    <span class="icon-phone"> </span> <a href="tel:+4790659071">+47 90659071</a><br>
-                    <span class="icon-mail"> </span> <a href="mailto:mathias.mellemstuen@gmail.com">mathias.mellemstuen@gmail.com</a><br>
-                    <span class="icon-github"></span> <a  target="_blank" href="https://github.com/mathiasmellemstuen">@mathiasmellemstuen</a><br>
-                    <span class="icon-website"></span> <a  target="_blank" href="https://mathias.mellemstuen.no">https://mathias.mellemstuen.no</a>
+                    <span class="icon-phone"> </span> <a id="phonenumber" href="tel:+4790659071">+47 90659071</a><br>
+                    <span class="icon-mail"> </span> <a id="email" href="mailto:mathias.mellemstuen@gmail.com">mathias.mellemstuen@gmail.com</a><br>
+                    <span class="icon-github"></span> <a id="github" target="_blank" href="https://github.com/mathiasmellemstuen">@mathiasmellemstuen</a><br>
+                    <span class="icon-website"></span> <a id="website" target="_blank" href="https://mathias.mellemstuen.no">https://mathias.mellemstuen.no</a>
                 </p>
-                <h4>Om meg</h4>
-                <p>Navn: Mathias Mellemstuen<br><span id="age">Alder: x år</span><br>Født: 13.01.1999<br>Førerkort: B, AM</p>
+                <h4 id="about-me-text">Om meg</h4>
+                <p id="about-me-paragraph">Navn: Mathias Mellemstuen<br><span id="age">Alder: x år</span><br>Født: 13.01.1999<br>Førerkort: B, AM</p>
                 <div id="download-button">
                     <a href="/cv.pdf">Nedlast CV</a>
                 </div>
             </div>
             <div class="main-content">
-                <h2 class="header-lines">Utdanning</h2>
-                <div class="flex-group">
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2019</span><br><span>dd</span></p>
-                        <p class="description"><b>Bachelorstudium i ingeniørfag - data, Y-veien</b><br>Bachlourutdannelse, Høgskolen i Østfold.</p>
-                    </section>
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2019</span><br><span>xx.xx.2019</span></p>
-                        <p class="description"><b>Sommerkurs i matematikk og fysikk</b><br>6 ukers sommerkurs i matematikk og fysikk.</p>
-                    </section>
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2017</span><br><span>xx.xx.2019</span></p>
-                        <p class="description"><b>Lærling i IKT-Servicefag</b><br>Lærling i IKT-serviefag i to år i Akershus Fylkeskommune.</p>
-                    </section>
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2016</span><br><span>xx.xx.2017</span></p>
-                        <p class="description"><b>Drømtorp vgs: IKT-service</b><br>Andre året på videregående skole.</p>
-                    </section>
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2015</span><br><span>xx.xx.2016</span></p>
-                        <p class="description"><b>Drømtorp vgs: Service og samferdsel</b><br>Første året på videregående skole.</p>
-                    </section>
-                </div>
-
-                <h2 class="header-lines">Jobberfaring</h2>
-                <div class="flex-group">
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2017</span><br><span>xx.xx.2019</span></p>
-                        <p class="description"><b>Lærling i Akershus Fylkeskommune Sentral IT</b><br>Lærling i IKT-serviefag i to år i Akershus Fylkeskommune.</p>
-                    </section>
-                    <section class="list-item">
-                        <p class="date"><span>xx.xx.2016</span><br><span>xx.xx.2017</span></p>
-                        <p class="description"><b>Praksisplass hos PC-kompaniet i Ski</b><br>Praksisarbeid i andre året på videregående skole.</p>
-                    </section>
-                </div>
+                <h2 id="education-header" class="header-lines">Utdanning</h2>
+                <div id="education-list" class="flex-group"></div>
+                <h2 id="job-experience-header" class="header-lines">Jobberfaring</h2>
+                <div id="job-list" class="flex-group"></div>
             </div>
         </main>
+
     </body>
 </html>
