@@ -54,6 +54,7 @@ window.onload = function() {
   if(languageParameter != undefined)
     currentLanguage = languageParameter;
 
+  document.getElementById("language-button").style.background = currentLanguage == "norwegian" ? 'url("Icons/flag-norway.svg") no-repeat' : 'url("Icons/flag-united-kingdom.svg") no-repeat';
     //Legger til funksjonalitet på language-button 
     document.getElementById("language-button").addEventListener("click", function() {
       document.getElementById("modal-language").style.display = "block";
