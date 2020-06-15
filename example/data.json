@@ -5,6 +5,7 @@
     "person": {
         "name":"Mathias Mellemstuen",
         "title":{"norwegian":"Dataingeniør", "english":"Computer engineer"},
+        "phone":"90659071",
         "email":"mathias.mellemstuen@gmail.com",
         "github": {
             "display":"@mathiasmellemstuen",
