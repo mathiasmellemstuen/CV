@@ -19,6 +19,7 @@ data.json:
     "person": {
         "name":"yourname",
         "title":{"language1":"your title", "english":"your title"},
+        "phone":"00000000",
         "email":"email",
         "github": {
             "display":"githubtext",
