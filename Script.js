@@ -101,8 +101,8 @@ window.onload = function() {
     document.documentElement.style.setProperty("--body-background", data.colors.body_background);
     document.documentElement.style.setProperty("--main-background", data.colors.main_background);
     document.documentElement.style.setProperty("--extra-content-background", data.colors.extra_content_background);
-    document.documentElement.style.setProperty("--download-button-background", data.colors.download_button_background);
-    document.documentElement.style.setProperty("--download-button-background-hover", data.colors.download_button_background_hover);
+    document.documentElement.style.setProperty("--print-button-background", data.colors.print_button_background);
+    document.documentElement.style.setProperty("--print-button-background-hover", data.colors.print_button_background_hover);
     document.documentElement.style.setProperty("--main-h1-background", data.colors.main_h1_background);
     document.documentElement.style.setProperty("--modal-background", data.colors.modal_background);
     document.documentElement.style.setProperty("--modal-content-background", data.colors.modal_content_background);
@@ -110,7 +110,7 @@ window.onload = function() {
     document.documentElement.style.setProperty("--main-box-shadow-color", data.colors.main_box_shadow_color);
     document.documentElement.style.setProperty("--extra-content-color", data.colors.extra_content_color);
     document.documentElement.style.setProperty("--link-color", data.colors.link_color);
-    document.documentElement.style.setProperty("--download-button-color", data.colors.download_button_color);
+    document.documentElement.style.setProperty("--print-button-color", data.colors.print_button_color);
     document.documentElement.style.setProperty("--main-h1-color", data.colors.main_h1_color);
     document.documentElement.style.setProperty("--mobile-extra-content-color", data.colors.mobile_extra_content_color);
     document.documentElement.style.setProperty("--mobile-link-color", data.colors.mobile_link_color);

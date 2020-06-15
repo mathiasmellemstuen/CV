@@ -52,17 +52,17 @@
     a {
         color:var(--link-color); 
     }
-    #download-button {
+    #print-button {
         position:absolute; 
         width:90%;
         height:3em; 
-        background-color:var(--download-button-background); 
+        background-color:var(--print-button-background); 
         bottom: 15px; 
         transition: 0.2s linear;
     }
-    #download-button a {
+    #print-button a {
         position: absolute;
-        color:var(--download-button-color);
+        color:var(--print-button-color);
         height:100%; 
         text-align: center;
         width:100%; 
@@ -75,6 +75,9 @@
 }
 @media (max-width: 1000px) {
 
+    body {
+        margin-left: 0px;
+    }
     #language-button {
         width: 6vw;
         height: 6vw;
@@ -112,20 +115,20 @@
     a {
         color:var(--mobile-link-color); 
     }
-    #download-button {
+    #print-button {
         position:fixed; 
         width:100%;
         height:3em; 
-        background-color:var(--download-button-background); 
+        background-color:var(--print-button-background); 
         bottom: 5px; 
         transition: 0.2s linear;
         left:10px; 
         right:10px; 
     
     } 
-    #download-button a {
+    #print-button a {
         position:fixed;
-        color:var(--download-button-color); 
+        color:var(--print-button-color); 
         text-align: center;
         line-height:3em;
         width:100%; 
@@ -173,7 +176,7 @@
         position: static;
         box-shadow:10px 10px 10px 10px var(--main-background);
     }
-    #download-button, #language-button {
+    #print-button, #language-button {
         display: none;
     }
     @page {
@@ -249,8 +252,8 @@ main {
     border-top:1px solid var(--header-lines-color);
     border-bottom:1px solid var(--header-lines-color);
 }
-#download-button:hover {
-    background-color: var(--download-button-background-hover); 
+#print-button:hover {
+    background-color: var(--print-button-background-hover); 
 }
 .flex-group {
     display:flex; 
