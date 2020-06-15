@@ -13,7 +13,7 @@
         grid-template-columns: 30% 69%; 
         grid-template-rows: 4em auto; 
         padding: 0.5vw; 
-        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 6px 1px var(--main-box-shadow-color);
         min-height: 95vh;
     }
     
@@ -26,8 +26,8 @@
     }
 
     .extra-content {
-        color: white; 
-        background-color: #3D5561; 
+        color: var(--extra-content-color); 
+        background-color: var(--extra-content-background); 
         grid-column-start: 1;
         grid-column-end: 1;
         grid-row-start: 1;
@@ -57,21 +57,21 @@
     }
 
     a {
-        color:white; 
+        color:var(--link-color); 
     }
 
     #download-button {
         position:absolute; 
         width:90%;
         height:3em; 
-        background-color:rgb(49, 67, 77); 
+        background-color:var(--download-button-background); 
         bottom: 15px; 
         transition: 0.2s linear;
     } 
 
     #download-button a {
         position: absolute;
-        color:white;
+        color:var(--download-button-color);
         height:100%; 
         text-align: center;
         width:100%; 
@@ -98,18 +98,18 @@
         flex-direction: column;
         width: 100%;
         padding: 0.5vw; 
-        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 6px 1px var(--main-box-shadow-color);
     }
 
     main h1 {
         order:1; 
-        background-color: #3D5561; 
+        background-color: var(--main-h1-background); 
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 1.5em;
         padding-bottom:1.5em; 
         text-align:center; 
-        color:white; 
+        color:var(--main-h1-color); 
 
     }
 
@@ -120,19 +120,19 @@
 
     .extra-content {
         order:2; 
-        color:black;
+        color:var(--mobile-extra-content-color);
         text-align:center; 
     }
 
     a {
-        color:black; 
+        color:var(--mobile-link-color); 
     }
 
     #download-button {
         position:fixed; 
         width:100%;
         height:3em; 
-        background-color:rgb(49, 67, 77); 
+        background-color:var(--download-button-background); 
         bottom: 5px; 
         transition: 0.2s linear;
         left:10px; 
@@ -142,7 +142,7 @@
 
     #download-button a {
         position:fixed;
-        color:white; 
+        color:var(--download-button-color); 
         text-align: center;
         line-height:3em;
         width:100%; 
@@ -188,9 +188,8 @@
         display:block; 
         height: auto;
         position: static;
-        box-shadow:10px 10px 10px 10px white;
+        box-shadow:10px 10px 10px 10px var(--main-background);
     }
-
     #download-button, #language-button {
         display: none;
     }
@@ -210,14 +209,14 @@ body {
     margin-top:1vh; 
     margin-bottom:1vh;
     padding:0; 
-    background-color: #eeeeee;
+    background-color: var(--body-background);
     font-family: 'Roboto', sans-serif;
 }
 
 main {
     margin-left: auto; 
     margin-right: auto; 
-    background-color: white;
+    background-color: var(--main-background);
     display:grid;
     grid-column-gap: 1%;
     
@@ -271,12 +270,12 @@ main {
 .header-lines {
     padding-top:3px; 
     padding-bottom:3px; 
-    border-top:1px solid black;
-    border-bottom:1px solid black;
+    border-top:1px solid var(--header-lines-color);
+    border-bottom:1px solid var(--header-lines-color);
 }
 
 #download-button:hover {
-    background-color: #4C6977; 
+    background-color: var(--download-button-background-hover); 
 }
 
 .flex-group {
@@ -321,14 +320,14 @@ main {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--modal-background);
 }
 .modal-content {
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    background-color:rgba(255, 255, 255, 0.90);
+    background-color: var(--modal-content-background);
     border-radius: 10px;
     padding: 5px;
     padding-left: 10px;
@@ -340,7 +339,7 @@ main {
     margin-left:100%;   
     border:none; 
     cursor: pointer;
-    color: black;
+    color: var(--modal-close-button-color);
     float: right;
     font-size: 18px;
     font-weight: bold;
@@ -358,7 +357,7 @@ main {
     margin-bottom: 20px;
 }
 .select-language-button:hover {
-    background-color: rgb(218, 218, 218);
+    background-color: var(--select-language-button-hover);
 }
 .language-button-flag {
     height: 100%;
@@ -369,5 +368,4 @@ main {
     margin-left: 30px;
     font-size: larger;
     font-weight: bold;
-
 }

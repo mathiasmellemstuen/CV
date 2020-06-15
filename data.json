@@ -65,5 +65,25 @@
         "education": {"norwegian": "Utdanning", "english": "Education"},
         "jobexperience": {"norwegian": "Jobberfaring", "english": "Job experience"},
         "language": {"norwegian":"Velg språk", "english":"Select a language"}
+    },
+    "colors": {
+        "body_background":"#eeeeee",
+        "main_background":"white", 
+        "extra_content_background":"#3D5561",
+        "download_button_background":"#4C6977",
+        "download_button_background_hover":"#314B4D",
+        "main_h1_background":"#3D5561",
+        "modal_background":"rgba(0, 0, 0, 0.6)",
+        "modal_content_background":"rgba(255, 255, 255, 0.90)",
+        "select_language_button_hover":"rgb(218, 218, 218)",
+        "main_box_shadow_color":"rgba(0,0,0,0.75)",
+        "extra_content_color":"white",
+        "link_color":"white",
+        "download_button_color":"white",
+        "main_h1_color":"white",
+        "mobile_extra_content_color":"black",
+        "mobile_link_color":"black",
+        "header-lines-color":"black",
+        "modal-close-button-color":"black"
     }
 }
