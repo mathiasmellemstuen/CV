@@ -80,7 +80,7 @@ window.onload = function() {
   fetch("data.json").then(response => response.json()).then(data => {
 
     window.document.title = data.title; 
-    document.getElementById("modal-language").getElementsByClassName("modal-language-header")[0].innerHTML = data.literals.language[currentLanguage];
+    document.getElementById("modal-language").getElementsByClassName("modal-language-header")[0].innerHTML = data.words.language[currentLanguage];
 
     document.getElementById("page-header").innerHTML = data.header; 
     document.getElementById("name").innerHTML = data.person.name; 
@@ -91,10 +91,10 @@ window.onload = function() {
     document.getElementById("github").href = data.person.github.hyperlink;
     document.getElementById("website").innerHTML = data.person.website.display;
     document.getElementById("website").href = data.person.website.hyperlink;
-    document.getElementById("about-me-text").innerHTML = data.literals.aboutme[currentLanguage]; 
-    document.getElementById("about-me-paragraph").innerHTML = data.literals.name[currentLanguage] + ": " + data.person.name + "<br>" + "<span id='age'>" + data.literals.age[currentLanguage] +": " + getAge(data.person.birth) + "</span><br>" + data.literals.born[currentLanguage] + ": " + formatDate(getDateObject(data.person.birth)) + "<br>" + data.literals.drivinglicense[currentLanguage] + ": " + data.person.driving_license;
-    document.getElementById("education-header").innerHTML = data.literals.education[currentLanguage]; 
-    document.getElementById("job-experience-header").innerHTML = data.literals.jobexperience[currentLanguage];
+    document.getElementById("about-me-text").innerHTML = data.words.aboutme[currentLanguage]; 
+    document.getElementById("about-me-paragraph").innerHTML = data.words.name[currentLanguage] + ": " + data.person.name + "<br>" + "<span id='age'>" + data.words.age[currentLanguage] +": " + getAge(data.person.birth) + "</span><br>" + data.words.born[currentLanguage] + ": " + formatDate(getDateObject(data.person.birth)) + "<br>" + data.words.drivinglicense[currentLanguage] + ": " + data.person.driving_license;
+    document.getElementById("education-header").innerHTML = data.words.education[currentLanguage]; 
+    document.getElementById("job-experience-header").innerHTML = data.words.jobexperience[currentLanguage];
 
     data.education.forEach(element => {
       document.getElementById("education-list").innerHTML += createListItemString(element.date,element[currentLanguage].header, element[currentLanguage].description);

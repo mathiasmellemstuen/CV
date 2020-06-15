@@ -1,5 +1,12 @@
 @media (min-width: 1000px) {
     
+    #language-button {
+        width: 3vw;
+        height: 3vw;
+    }
+    .modal-content {
+        width: 500px;
+    }
     main {
         min-width: 1000px;
         width:49vw; 
@@ -78,6 +85,14 @@
 }
 @media (max-width: 1000px) {
 
+        
+    #language-button {
+        width: 6vw;
+        height: 6vw;
+    }
+    .modal-content {
+        width: 90%;
+    }
     main {
         display:flex; 
         flex-direction: column;
@@ -286,8 +301,6 @@ main {
     position:fixed; 
     top: 10px;
     right:10px; 
-    width: 3vw;
-    height: 3vw;
     background: url("Icons/flag-norway.svg") no-repeat;
     border:none;
 }
@@ -313,7 +326,6 @@ main {
 .modal-content {
     display: block;
     position: relative;
-    width: 500px;
     margin-left: auto;
     margin-right: auto;
     background-color:rgba(255, 255, 255, 0.90);

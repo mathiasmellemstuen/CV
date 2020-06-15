@@ -17,29 +17,29 @@
         "birth":"19990113",
         "driving_license":"B, AM"
     },
-    "education":[
+    "education": [
         {
-            "date":{"start":"xx.xx.2019", "end":"dd"},
+            "date":{"start":"12.08.2019", "end":"dd"},
             "norwegian":{"header":"Bachelorstudium i ingeniørfag - data, Y-veien","description":"Bachlourutdannelse, Høgskolen i Østfold."},
             "english":{"header":"Bachelor degree in engineering - computer","description":"Bachelor degree, Østfold University College"}
         },
         {
-            "date":{"start":"xx.xx.2019", "end":"xx.xx.2019"},
+            "date":{"start":"22.06.2019", "end":"02.08.2019"},
             "norwegian":{"header":"Sommerkurs i matematikk og fysikk","description":"6 ukers sommerkurs i matematikk og fysikk."},
             "english":{"header":"Summer courses in mathematics and physics","description":"A 6 weeks long summer course in mathematics and physics."}
         },
         {
-            "date":{"start":"xx.xx.2017", "end":"xx.xx.2019"},
+            "date":{"start":"01.08.2017", "end":"20.06.2019"},
             "norwegian":{"header":"Lærling i IKT-Servicefag","description":"Lærling i IKT-serviefag i to år i Akershus Fylkeskommune, sentral IT."},
             "english":{"header":"ICT Service Operations apprentice","description":"ICT Service Operations apprentice for two years in Akershus County, IT department."}
         },
         {
-            "date":{"start":"xx.xx.2016", "end":"xx.xx.2017"},
+            "date":{"start":"18.08.2016", "end":"22.06.2017"},
             "norwegian":{"header":"Drømtorp vgs: IKT-servicefag","description":"Andre året på videregående skole."},
             "english":{"header":"Drømtorp highschool: ICT Service Operations","description":"Second year in highschool."}
         },
         {
-            "date":{"start":"xx.xx.2015", "end":"xx.xx.2016"},
+            "date":{"start":"18.08.2015", "end":"22.06.2016"},
             "norwegian":{"header":"Drømtorp vgs: Service og samferdsel","description":"Første året på videregående skole."},
             "english":{"header":"Drømtorp highschool: Service and Transport","description":"First year in highschool."}
         }
@@ -56,14 +56,14 @@
             "english":{"header":"Internship at PC-kompaniet, Ski City","description":"Internship in the first year of highschool."}
         }
     ],
-    "literals": {
-        "aboutme":{"norwegian": "Om meg", "english": "About me"},
-        "name":{"norwegian": "Navn", "english": "Name"},
-        "age":{"norwegian": "Alder", "english": "Age"},
-        "born":{"norwegian": "Født", "english": "Born"},
-        "drivinglicense":{"norwegian": "Førerkort", "english": "Driving license"},
-        "education":{"norwegian": "Utdanning", "english": "Education"},
-        "jobexperience":{"norwegian": "Jobberfaring", "english": "Job experience"},
-        "language":{"norwegian":"Velg språk", "english":"Select a language"}
+    "words": {
+        "aboutme": {"norwegian": "Om meg", "english": "About me"},
+        "name": {"norwegian": "Navn", "english": "Name"},
+        "age": {"norwegian": "Alder", "english": "Age"},
+        "born": {"norwegian": "Født", "english": "Born"},
+        "drivinglicense": {"norwegian": "Førerkort", "english": "Driving license"},
+        "education": {"norwegian": "Utdanning", "english": "Education"},
+        "jobexperience": {"norwegian": "Jobberfaring", "english": "Job experience"},
+        "language": {"norwegian":"Velg språk", "english":"Select a language"}
     }
 }
