@@ -16,7 +16,6 @@
         box-shadow: 0px 0px 6px 1px var(--main-box-shadow-color);
         min-height: 95vh;
     }
-    
     main h1 {
         grid-column-start: 2;
         grid-column-end: 2;
@@ -24,7 +23,6 @@
         grid-row-end: 1;
         margin-bottom:0;
     }
-
     .extra-content {
         color: var(--extra-content-color); 
         background-color: var(--extra-content-background); 
@@ -35,31 +33,25 @@
         padding: 5%; 
         position:relative; 
     }
-
     .extra-content h3 {
         text-align: center;
         margin-bottom:0; 
     }
-
     .extra-content img {
         width:100%; 
     }
-
     .main-content {
         grid-column-start: 2;
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 2;
     }
-
     .main-content h1 {
         text-align: center;
     }
-
     a {
         color:var(--link-color); 
     }
-
     #download-button {
         position:absolute; 
         width:90%;
@@ -67,8 +59,7 @@
         background-color:var(--download-button-background); 
         bottom: 15px; 
         transition: 0.2s linear;
-    } 
-
+    }
     #download-button a {
         position: absolute;
         color:var(--download-button-color);
@@ -78,14 +69,12 @@
         line-height:3em;
         text-decoration: none;
     }
-
     .icon-phone, .icon-mail, .icon-github, .icon-website {
         filter:invert(); 
     }
 }
 @media (max-width: 1000px) {
 
-        
     #language-button {
         width: 6vw;
         height: 6vw;
@@ -100,7 +89,6 @@
         padding: 0.5vw; 
         box-shadow: 0px 0px 6px 1px var(--main-box-shadow-color);
     }
-
     main h1 {
         order:1; 
         background-color: var(--main-h1-background); 
@@ -112,22 +100,18 @@
         color:var(--main-h1-color); 
 
     }
-
     .main-content {
         order:3; 
         margin-bottom:3em; 
     }
-
     .extra-content {
         order:2; 
         color:var(--mobile-extra-content-color);
         text-align:center; 
     }
-
     a {
         color:var(--mobile-link-color); 
     }
-
     #download-button {
         position:fixed; 
         width:100%;
@@ -139,7 +123,6 @@
         right:10px; 
     
     } 
-
     #download-button a {
         position:fixed;
         color:var(--download-button-color); 
@@ -212,7 +195,6 @@ body {
     background-color: var(--body-background);
     font-family: 'Roboto', sans-serif;
 }
-
 main {
     margin-left: auto; 
     margin-right: auto; 
@@ -221,7 +203,6 @@ main {
     grid-column-gap: 1%;
     
 }
-
 .icon-phone {
     background-image: url("Icons/phone.svg");
     background-size: cover;
@@ -231,7 +212,6 @@ main {
     width: 1em;
     display:inline-block;
 }
-
 .icon-mail {
     background-image: url("Icons/mail.svg");
     background-size: cover;
@@ -241,7 +221,6 @@ main {
     width: 1em;
     display:inline-block;
 }
-
 .icon-github {
     background-image: url("Icons/github.svg");
     background-size: cover;
@@ -251,7 +230,6 @@ main {
     width: 1em;
     display:inline-block;
 }
-
 .icon-website {
     background-image: url("Icons/website.svg");
     background-size: cover;
@@ -261,23 +239,19 @@ main {
     width: 1em;
     display:inline-block;
 }
-
 #title {
     margin-top: 0;
     text-align: center;
 }
-
 .header-lines {
     padding-top:3px; 
     padding-bottom:3px; 
     border-top:1px solid var(--header-lines-color);
     border-bottom:1px solid var(--header-lines-color);
 }
-
 #download-button:hover {
     background-color: var(--download-button-background-hover); 
 }
-
 .flex-group {
     display:flex; 
     flex-direction: column;

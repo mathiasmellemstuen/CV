@@ -21,11 +21,13 @@ function getAge(birthDateStr) {
     }
     return age;
 }
+
 function getDateObject(birthDateStr) {
   var parts = birthDateStr.match(/(\d{4})(\d{2})(\d{2})/);
   var birthDate = new Date(parts[1], parts[2]-1, parts[3]);
   return birthDate;
 }
+
 function formatDate(date) {
   var d = new Date(date),
   month = '' + (d.getMonth() + 1),
@@ -39,33 +41,34 @@ function formatDate(date) {
 
   return [day, month, year].join('.');
 }
+
 function createListItemString(date,header,description) {
   return '<section class="list-item"><p class="date"><span>' + date.start + '</span><br><span>' + date.end + '</span></p><p class="description"><b>' + header + '</b><br>' + description + '</p></section>';
 }
 
+function createLanguagebutton(language) {
+  return '<button class="select-language-button" value="'+ language + '"><img class="language-button-flag" src="Icons/' + language +'.svg"/><p class="language-button-text">' + capitalizeFirstCharacterOfString(language) + '</p></button>'
+}
+
+function capitalizeFirstCharacterOfString(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 window.onload = function() {
-
-
-  let currentLanguage = "norwegian"; 
-
-  const urlParameters = new URLSearchParams(window.location.search);
-  const languageParameter = urlParameters.get("language");
-
-  if(languageParameter != undefined)
-    currentLanguage = languageParameter;
-
-  document.getElementById("language-button").style.background = currentLanguage == "norwegian" ? 'url("Icons/flag-norway.svg") no-repeat' : 'url("Icons/flag-united-kingdom.svg") no-repeat';
-    //Legger til funksjonalitet på language-button 
-    document.getElementById("language-button").addEventListener("click", function() {
-      document.getElementById("modal-language").style.display = "block";
-
-    });
 
     //Legger til funksjonalitet på alle lukk modal knappene. 
     for (let element of document.getElementsByClassName("modal-close-button")) {
         element.addEventListener("click", function() {
           element.parentElement.parentElement.style.display = "none";
         });
+    }
+
+  fetch("data.json").then(response => response.json()).then(data => {
+
+    document.getElementById("language-list").innerHTML = "";
+
+    for(let language of data.languages) {
+      document.getElementById("language-list").innerHTML += createLanguagebutton(language); 
     }
 
     //Legger til funksjonalitet på alle select-language-button 
@@ -75,12 +78,44 @@ window.onload = function() {
         let selectedLanguage = element.value;
         document.location.href = document.location.href.split("?")[0] + "?language=" + selectedLanguage;
       });
-  }
+    }
 
-  fetch("data.json").then(response => response.json()).then(data => {
+    let currentLanguage = data.languages[0]; 
+
+    const urlParameters = new URLSearchParams(window.location.search);
+    const languageParameter = urlParameters.get("language");
+  
+    if(languageParameter != undefined)
+      currentLanguage = languageParameter;
+  
+    document.getElementById("language-button").style.background = 'url("Icons/'+ currentLanguage + '.svg") no-repeat';
+
+      //Legger til funksjonalitet på language-button 
+    document.getElementById("language-button").addEventListener("click", function() {
+      document.getElementById("modal-language").style.display = "block";
+    });
 
     window.document.title = data.title; 
     document.getElementById("modal-language").getElementsByClassName("modal-language-header")[0].innerHTML = data.words.language[currentLanguage];
+
+    document.documentElement.style.setProperty("--body-background", data.colors.body_background);
+    document.documentElement.style.setProperty("--main-background", data.colors.main_background);
+    document.documentElement.style.setProperty("--extra-content-background", data.colors.extra_content_background);
+    document.documentElement.style.setProperty("--download-button-background", data.colors.download_button_background);
+    document.documentElement.style.setProperty("--download-button-background-hover", data.colors.download_button_background_hover);
+    document.documentElement.style.setProperty("--main-h1-background", data.colors.main_h1_background);
+    document.documentElement.style.setProperty("--modal-background", data.colors.modal_background);
+    document.documentElement.style.setProperty("--modal-content-background", data.colors.modal_content_background);
+    document.documentElement.style.setProperty("--select-language-button-hover", data.colors.select_language_button_hover);
+    document.documentElement.style.setProperty("--main-box-shadow-color", data.colors.main_box_shadow_color);
+    document.documentElement.style.setProperty("--extra-content-color", data.colors.extra_content_color);
+    document.documentElement.style.setProperty("--link-color", data.colors.link_color);
+    document.documentElement.style.setProperty("--download-button-color", data.colors.download_button_color);
+    document.documentElement.style.setProperty("--main-h1-color", data.colors.main_h1_color);
+    document.documentElement.style.setProperty("--mobile-extra-content-color", data.colors.mobile_extra_content_color);
+    document.documentElement.style.setProperty("--mobile-link-color", data.colors.mobile_link_color);
+    document.documentElement.style.setProperty("--header-lines-color", data.colors.header_lines_color);
+    document.documentElement.style.setProperty("--modal-close-button-color", data.colors.modal_close_button_color);
 
     document.getElementById("page-header").innerHTML = data.header; 
     document.getElementById("name").innerHTML = data.person.name; 
@@ -102,27 +137,6 @@ window.onload = function() {
 
     data.work.forEach(element => {
       document.getElementById("job-list").innerHTML += createListItemString(element.date,element[currentLanguage].header, element[currentLanguage].description);
-
     });
-
-    document.documentElement.style.setProperty("--body-background", data.colors.body_background);
-    document.documentElement.style.setProperty("--main-background", data.colors.main_background);
-    document.documentElement.style.setProperty("--extra-content-background", data.colors.extra_content_background);
-    document.documentElement.style.setProperty("--download-button-background", data.colors.download_button_background);
-    document.documentElement.style.setProperty("--download-button-background-hover", data.colors.download_button_background_hover);
-    document.documentElement.style.setProperty("--main-h1-background", data.colors.main_h1_background);
-    document.documentElement.style.setProperty("--modal-background", data.colors.modal_background);
-    document.documentElement.style.setProperty("--modal-content-background", data.colors.modal_content_background);
-    document.documentElement.style.setProperty("--select-language-button-hover", data.colors.select_language_button_hover);
-    document.documentElement.style.setProperty("--main-box-shadow-color", data.colors.main_box_shadow_color);
-    document.documentElement.style.setProperty("--extra-content-color", data.colors.extra_content_color);
-    document.documentElement.style.setProperty("--link-color", data.colors.link_color);
-    document.documentElement.style.setProperty("--download-button-color", data.colors.download_button_color);
-    document.documentElement.style.setProperty("--main-h1-color", data.colors.main_h1_color);
-    document.documentElement.style.setProperty("--mobile-extra-content-color", data.colors.mobile_extra_content_color);
-    document.documentElement.style.setProperty("--mobile-link-color", data.colors.mobile_link_color);
-    document.documentElement.style.setProperty("--header-lines-color", data.colors.header_lines_color);
-    document.documentElement.style.setProperty("--modal-close-button-color", data.colors.modal_close_button_color);
-
   });
 }
