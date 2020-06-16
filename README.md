@@ -1,5 +1,5 @@
 # CV
-A HTML5 CV template that supports multiple languages. Check out a live demo [here](https://mathias.mellemstuen.no?language=english).
+A HTML5 CV template that supports multiple languages. Check out a live demo [here](https://cv.mathias.mellemstuen.no?language=english).
 
 ## Installation 
 1. Copy the files in the [source](https://github.com/mathiasmellemstuen/CV/tree/master/source) directory to your webserver. 
